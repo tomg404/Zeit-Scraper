@@ -3,11 +3,23 @@ import src.downloader as downloader
 import src.scraper as scraper
 import src.cleaner as cleaner
 import src.writer as writer
+import argparse as ap
 import time
 import os
 
+__version__ = '1.0'
+
+def argparser():
+    parser = ap.ArgumentParser(description="""
+    Project for downloading and scraping all new articles from https://www.zeit.de.\n
+    Please see the vars.py file (src/vars.py) if you want to use the service of https://notify.run.\n""",
+    epilog="(c) Tom Gaimann | github.com/tomg404")
+    parser.add_argument('-v', '--version', action='version', version="Version: %s" % __version__, help="show program's version number and exit")
+    parser.add_argument('-o', '--output-file', help="set the ouput file path") # TODO: make this work
+    args = parser.parse_args()
 
 if __name__ == '__main__':
+    argparser()
     try:
         # creates new csv file if it doesn't already exist
         if not os.path.isfile(CSV_FILE):
