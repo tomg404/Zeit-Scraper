@@ -1,8 +1,9 @@
 # Scrapes articles in xml-temp and moves them to xml-files to store them (forever)
 import os
-from vars import XML_DIR, SAVE_XML_DIR, USE_NOTIFY, ENDPOINT
+import src.writer as writer
+from src.vars import XML_DIR, SAVE_XML_DIR, USE_NOTIFY, ENDPOINT
 import xml.etree.ElementTree as ET
-import writer
+
 
 # defines a article object which contains the scraped data
 class Article:

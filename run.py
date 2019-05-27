@@ -1,8 +1,8 @@
-from vars import CSV_FILE, XML_DIR, SAVE_XML_DIR, USE_NOTIFY, ENDPOINT
-import downloader
-import scraper
-import cleaner
-import writer
+from src.vars import CSV_FILE, XML_DIR, SAVE_XML_DIR, USE_NOTIFY, ENDPOINT
+import src.downloader as downloader
+import src.scraper as scraper
+import src.cleaner as cleaner
+import src.writer as writer
 import time
 import os
 

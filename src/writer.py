@@ -1,5 +1,5 @@
 import csv
-from vars import CSV_FILE, FIELDNAMES, DELIMITER
+from src.vars import CSV_FILE, FIELDNAMES, DELIMITER
 
 # creates new csv file
 def create_new(name):

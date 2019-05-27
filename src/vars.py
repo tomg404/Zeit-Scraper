@@ -9,5 +9,5 @@ FIELDNAMES = ['author', 'title_length', 'subtitle_length',
             'subtitle', 'location']
 
 # notify.run config
-USE_NOTIFY = True
-ENDPOINT = 'https://notify.run/0TDmVeGTVjU64wqv'
+USE_NOTIFY = False
+ENDPOINT = 'https://notify.run/XXXXXXXXXX'

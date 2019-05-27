@@ -3,7 +3,7 @@ import random
 import os.path
 import requests
 import xml.etree.ElementTree as ET
-from vars import XML_DIR, SAVE_XML_DIR
+from src.vars import XML_DIR, SAVE_XML_DIR
 
 xml_file = XML_DIR + 'index.xml'
 
