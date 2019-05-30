@@ -8,3 +8,6 @@ runs on my Synology Diskstation and is executed every 2 hours.
 1. Install the requirements from requirements.txt
 2. Execute the run.py file
 3. Done
+
+### Screenshot
+![alt text](https://raw.githubusercontent.com/tomg404/Zeit-Scraper/master/screenshots/Screenshot_1.png)
