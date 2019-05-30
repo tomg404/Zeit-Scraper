@@ -5,7 +5,7 @@ basedir = Path().absolute()
 
 XML_DIR = basedir.joinpath('xml-temp/')
 SAVE_XML_DIR = basedir.joinpath('xml-files/')
-CSV_FILE = str(basedir.joinpath('data.csv'))
+CSV_FILE = basedir.joinpath('data.csv')
 DELIMITER = '|'
 FIELDNAMES = ['author', 'title_length', 'subtitle_length',
             'genre', 'ressort', 'sub_ressort', 'edited',

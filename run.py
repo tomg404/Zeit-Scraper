@@ -12,17 +12,20 @@ import os
 
 
 if __name__ == '__main__':
+    csv_file = str(CSV_FILE)
+    xml_dir = str(XML_DIR)
+    save_xml_dir = str(SAVE_XML_DIR)
     argparser.argparser()
     try:
         # creates new csv file if it doesn't already exist
-        if not os.path.isfile(CSV_FILE):
-            writer.create_new(CSV_FILE)
+        if not os.path.isfile(csv_file):
+            writer.create_new(csv_file)
 
-        if not os.path.exists(XML_DIR):
-            os.makedirs(XML_DIR)
+        if not os.path.exists(xml_dir):
+            os.makedirs(xml_dir)
 
-        if not os.path.exists(SAVE_XML_DIR):
-            os.makedirs(SAVE_XML_DIR)
+        if not os.path.exists(save_xml_dir):
+            os.makedirs(save_xml_dir)
 
         start_time = time.time()
         downloader.download()

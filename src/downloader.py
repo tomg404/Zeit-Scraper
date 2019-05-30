@@ -6,7 +6,7 @@ import requests
 import xml.etree.ElementTree as ET
 from src.vars import XML_DIR, SAVE_XML_DIR
 
-xml_file = XML_DIR.joinpath('index.xml')
+xml_file = str(XML_DIR.joinpath('index.xml'))
 
 # url where every new article on the frontpage is listed
 xml_index_url = 'http://xml.zeit.de/index'
@@ -37,12 +37,13 @@ def download_all_articles(urls_array):
     failed_file_counter = 0
     for i in range(0, len(urls_array)):
         filename = urls_array[i].split('/')[-1] + '.xml'    # splits the url at '/' and takes only the name
-        download_destination = XML_DIR.joinpath(filename)
+        download_destination = str(XML_DIR.joinpath(filename))
+        temp_dir = str(SAVE_XML_DIR.joinpath(filename))
         # checks if file already exists in temp directory or in the storage
         # directory. if not .. DOWNLOAD!
         if os.path.isfile(download_destination):
             pass
-        elif os.path.isfile(SAVE_XML_DIR.joinpath(filename)):
+        elif os.path.isfile(temp_dir):
             pass
         else:
             try:
