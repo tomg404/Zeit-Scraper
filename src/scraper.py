@@ -84,9 +84,9 @@ def main():
     counter = 0
     fail_counter = 0
 
-    for file in os.listdir(str(XML_DIR)):
+    for file in os.listdir(XML_DIR):
         try:
-            a = Article(str(XML_DIR.joinpath(file)))
+            a = Article(XML_DIR + file)
             a.scrape()
 
             dict = {
@@ -111,7 +111,7 @@ def main():
             writer.insert_data(dict)
 
             counter += 1    # increment success counter
-            os.rename(XML_DIR.joinpath(file), SAVE_XML_DIR.joinpath(file))  # move the files to the storage
+            os.rename(XML_DIR + file, SAVE_XML_DIR + file)  # move the files to the storage
 
         except Exception as e:
             print('Error: ', e)
