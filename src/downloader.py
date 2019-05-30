@@ -1,19 +1,20 @@
 ### Downloads the xml file of every new article on zeit.de in a folder
 import random
-import os.path
+from pathlib import Path
+import os
 import requests
 import xml.etree.ElementTree as ET
 from src.vars import XML_DIR, SAVE_XML_DIR
 
-xml_file = XML_DIR + 'index.xml'
+xml_file = XML_DIR.joinpath('index.xml')
 
 # url where every new article on the frontpage is listed
 xml_index_url = 'http://xml.zeit.de/index'
 
 def main():
     r = requests.get(xml_index_url).text
-    xml = open(xml_file, 'w')
-    xml.write(r)
+    with open(xml_file, 'w', encoding='utf-8') as xml:
+        xml.write(r)
     articles = get_all_article_urls(xml_file)
     download_all_articles(articles)
 
@@ -36,12 +37,12 @@ def download_all_articles(urls_array):
     failed_file_counter = 0
     for i in range(0, len(urls_array)):
         filename = urls_array[i].split('/')[-1] + '.xml'    # splits the url at '/' and takes only the name
-        download_destination = XML_DIR + filename
+        download_destination = XML_DIR.joinpath(filename)
         # checks if file already exists in temp directory or in the storage
         # directory. if not .. DOWNLOAD!
         if os.path.isfile(download_destination):
             pass
-        elif os.path.isfile(SAVE_XML_DIR + filename):
+        elif os.path.isfile(SAVE_XML_DIR.joinpath(filename)):
             pass
         else:
             try:
@@ -59,14 +60,6 @@ def download():
         main()
         os.remove(xml_file) # delete the index xml file
     except Exception as e:
-        print('Error: ' + str(e))
+        print('Error: ')
+        print(e)
         print('Something went wrong in %s!' % __file__)
-
-
-# if __name__ == '__main__':
-#     try:
-#         main()
-#         os.remove(xml_file) # delete the index xml file
-#     except Exception as e:
-#         print('Error: ' + str(e))
-#         print('Something went wrong in %s!' % __file__)
