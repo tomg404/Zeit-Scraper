@@ -1,5 +1,10 @@
-XML_DIR = 'xml-temp/'
-SAVE_XML_DIR = 'xml-files/'
+import os.path
+
+
+
+CWD = os.getcwd()
+XML_DIR = CWD + 'xml-temp/'
+SAVE_XML_DIR = CWD + 'xml-files/'
 CSV_FILE = 'data.csv'
 DELIMITER = '|'
 FIELDNAMES = ['author', 'title_length', 'subtitle_length',

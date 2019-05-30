@@ -44,7 +44,8 @@ def download_all_articles(urls_array):
             pass
         else:
             r = requests.get(urls_array[i]).text
-            open(download_destination, 'w').write(r)
+            with open(download_destination, 'w', encoding='utf-8') as d:
+                d.write(r)
             new_file_counter += 1
 
     print('-Downloaded %s new files!' % new_file_counter)
