@@ -15,14 +15,14 @@ if __name__ == '__main__':
     argparser.argparser()
     try:
         # creates new csv file if it doesn't already exist
-        if not os.path.isfile(CSV_FILE):
-            writer.create_new(CSV_FILE)
+        if not os.path.isfile(str(CSV_FILE)):
+            writer.create_new(str(CSV_FILE))
 
-        if not os.path.exists(XML_DIR):
-            os.makedirs(XML_DIR)
+        if not os.path.exists(str(XML_DIR)):
+            os.makedirs(str(XML_DIR))
 
-        if not os.path.exists(SAVE_XML_DIR):
-            os.makedirs(SAVE_XML_DIR)
+        if not os.path.exists(str(SAVE_XML_DIR)):
+            os.makedirs(str(SAVE_XML_DIR))
 
         start_time = time.time()
         downloader.download()

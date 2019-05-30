@@ -114,7 +114,7 @@ def main():
             os.rename(XML_DIR.joinpath(file), SAVE_XML_DIR.joinpath(file))  # move the files to the storage
 
         except Exception as e:
-            print('Error: ' + str(e))
+            print('Error: ', e)
             fail_counter += 1   # increment fail counter
 
     result_msg = '-Scraped %s new article(s). %s failed.' % (counter, fail_counter)

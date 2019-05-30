@@ -60,6 +60,5 @@ def download():
         main()
         os.remove(xml_file) # delete the index xml file
     except Exception as e:
-        print('Error: ')
-        print(e)
+        print('Error: ', e)
         print('Something went wrong in %s!' % __file__)
