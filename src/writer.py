@@ -8,6 +8,6 @@ def create_new(name):
         writer.writerow(FIELDNAMES)
 
 def insert_data(dict):
-    with open(CSV_FILE), mode='a', encoding='utf-8', newline='') as csvfile:
+    with open(CSV_FILE, mode='a', encoding='utf-8', newline='') as csvfile:
         writer = csv.DictWriter(csvfile, fieldnames=FIELDNAMES)
         writer.writerow(dict)

@@ -3,8 +3,8 @@ from pathlib import Path
 
 basedir = Path().absolute()
 
-XML_DIR = str(basedir.joinpath('xml-temp/'))
-SAVE_XML_DIR = str(basedir.joinpath('xml-files/'))
+XML_DIR = basedir.joinpath('xml-temp/')
+SAVE_XML_DIR = basedir.joinpath('xml-files/')
 CSV_FILE = str(basedir.joinpath('data.csv'))
 DELIMITER = '|'
 FIELDNAMES = ['author', 'title_length', 'subtitle_length',
