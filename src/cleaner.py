@@ -7,4 +7,4 @@ def clean():
         pass
     else:
         for f in listdir(str(XML_DIR)):
-            remove(str(XML_DIR.joinpath(f))
+            remove(str(XML_DIR.joinpath(f)))
