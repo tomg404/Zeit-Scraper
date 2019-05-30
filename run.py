@@ -9,6 +9,7 @@ import src.writer as writer
 import src.argparser as argparser
 import time
 import os
+import traceback
 
 
 if __name__ == '__main__':
@@ -36,6 +37,7 @@ if __name__ == '__main__':
     except Exception as e:
         error_msg = 'Something went horribly wrong. Please check the program.\nError: %s' % e
         print(error_msg)
+        traceback.print_exc()
 
         # send the error via notify.run if USE_NOTIFY is True
         if USE_NOTIFY:

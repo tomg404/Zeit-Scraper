@@ -3,8 +3,8 @@ from os import listdir, remove, path
 from src.vars import XML_DIR
 
 def clean():
-    if len(listdir(XML_DIR)) == 0:
+    if len(listdir(str(XML_DIR))) == 0:
         pass
     else:
-        for f in listdir(XML_DIR):
-            remove(path.join(XML_DIR, f))
+        for f in listdir(str(XML_DIR)):
+            remove(str(XML_DIR.joinpath(f))
