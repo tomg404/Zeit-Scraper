@@ -1,11 +1,11 @@
-import os.path
+from pathlib import Path
 
 
+basedir = Path().absolute()
 
-CWD = os.getcwd()
-XML_DIR = CWD + 'xml-temp/'
-SAVE_XML_DIR = CWD + 'xml-files/'
-CSV_FILE = 'data.csv'
+XML_DIR = basedir / 'xml-temp/'
+SAVE_XML_DIR = basedir / 'xml-files/'
+CSV_FILE = basedir / 'data.csv'
 DELIMITER = '|'
 FIELDNAMES = ['author', 'title_length', 'subtitle_length',
             'genre', 'ressort', 'sub_ressort', 'edited',

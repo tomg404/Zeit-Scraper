@@ -33,6 +33,7 @@ def get_all_article_urls(xml_file):
 # downloads all articles in url_array and checks if they already exist
 def download_all_articles(urls_array):
     new_file_counter = 0
+    failed_file_counter = 0
     for i in range(0, len(urls_array)):
         filename = urls_array[i].split('/')[-1] + '.xml'    # splits the url at '/' and takes only the name
         download_destination = XML_DIR + filename
@@ -43,12 +44,15 @@ def download_all_articles(urls_array):
         elif os.path.isfile(SAVE_XML_DIR + filename):
             pass
         else:
-            r = requests.get(urls_array[i]).text
-            with open(download_destination, 'w', encoding='utf-8') as d:
-                d.write(r)
-            new_file_counter += 1
+            try:
+                r = requests.get(urls_array[i]).text
+                with open(download_destination, 'w', encoding='utf-8') as d:
+                    d.write(r)
+                new_file_counter += 1
+            except:
+                failed_file_counter += 1
 
-    print('-Downloaded %s new files!' % new_file_counter)
+    print('-Downloaded %s new files! %s failed.' % (new_file_counter, failed_file_counter))
 
 def download():
     try:
