@@ -1,6 +1,6 @@
 import argparse as ap
 
-__version__ = "1.0"
+__version__ = "1.1"
 __author__ = "Tom Gaimann | github.com/tomg404"
 
 def argparser():
