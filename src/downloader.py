@@ -13,7 +13,7 @@ xml_index_url = 'http://xml.zeit.de/index'
 
 def main():
     r = requests.get(xml_index_url).text
-    with open(xml_file, 'w', encoding='utf-8') as xml:
+    with open(xml_file, 'w') as xml:
         xml.write(r)
     articles = get_all_article_urls(xml_file)
     download_all_articles(articles)
@@ -48,7 +48,7 @@ def download_all_articles(urls_array):
         else:
             try:
                 r = requests.get(urls_array[i]).text
-                with open(download_destination, 'w', encoding='utf-8') as d:
+                with open(download_destination, 'w') as d:
                     d.write(r)
 
                 new_file_counter += 1
