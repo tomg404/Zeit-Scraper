@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*- 
 """Cleans the xml-temp directory if there are files which couldn't be parsed"""
 
 from os import listdir, remove, path

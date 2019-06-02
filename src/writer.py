@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 import csv
 from src.vars import CSV_FILE, FIELDNAMES, DELIMITER
 

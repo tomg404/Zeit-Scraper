@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """Downloads the xml file of every new article on zeit.de in a folder"""
 
 import random

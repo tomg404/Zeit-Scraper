@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """Scrapes articles in xml-temp and moves them to xml-files to store them (forever)"""
 
 import os
