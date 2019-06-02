@@ -1,5 +1,6 @@
-from pathlib import Path
+# -*- coding: utf-8 -*-
 
+from pathlib import Path
 
 basedir = Path().absolute()
 

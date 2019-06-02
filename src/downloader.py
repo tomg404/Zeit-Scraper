@@ -1,4 +1,6 @@
-### Downloads the xml file of every new article on zeit.de in a folder
+# -*- coding: utf-8 -*-
+"""Downloads the xml file of every new article on zeit.de in a folder"""
+
 import random
 from pathlib import Path
 import os
@@ -48,7 +50,7 @@ def download_all_articles(urls_array):
         else:
             try:
                 r = requests.get(urls_array[i]).text
-                with open(download_destination, 'w') as d:
+                with open(download_destination, 'w', encoding='ISO-8859-1') as d:
                     d.write(r)
 
                 new_file_counter += 1

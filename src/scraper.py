@@ -1,4 +1,6 @@
-# Scrapes articles in xml-temp and moves them to xml-files to store them (forever)
+# -*- coding: utf-8 -*-
+"""Scrapes articles in xml-temp and moves them to xml-files to store them (forever)"""
+
 import os
 from pathlib import Path
 import src.writer as writer

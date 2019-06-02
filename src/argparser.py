@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*- 
+
 import argparse as ap
 
 __version__ = "1.1"
