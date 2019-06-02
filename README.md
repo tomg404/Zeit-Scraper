@@ -15,7 +15,7 @@ runs on my Synology Diskstation and is executed every 2 hours.
 ### Output format
 |author|genre|ressort|sub_ressort|edited|...|
 |------|-----|-------|-----------|------|---|
-|Max Mustermann|Sport|Fussball|Yes|...|
+|Max Mustermann|Kommentar|Sport|Fussball|Yes|...|
 
 ### Future updates
 + Visualization of the scraped data
