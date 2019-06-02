@@ -12,6 +12,11 @@ runs on my Synology Diskstation and is executed every 2 hours.
 ### Screenshot
 ![alt text](https://raw.githubusercontent.com/tomg404/Zeit-Scraper/master/screenshots/Screenshot_1.png)
 
+### Output format
+|author|genre|ressort|sub_ressort|edited|...|
+|------|-----|-------|-----------|------|---|
+|Max Mustermann|Sport|Fussball|Yes|...|
+
 ### Future updates
 + Visualization of the scraped data
   + on a webpage
