@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 import os
-import time
+from time import strftime, gmtime, time
 import traceback
 from src.vars import *
 import src.writer as writer
