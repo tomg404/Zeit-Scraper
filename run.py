@@ -12,12 +12,27 @@ import os
 import traceback
 
 
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
+from src.vars import *
+import src.downloader as downloader
+import src.scraper as scraper
+import src.cleaner as cleaner
+import src.writer as writer
+import src.argparser as argparser
+from time import gmtime, strftime, time
+import os
+import traceback
+
+
 if __name__ == '__main__':
     csv_file = str(CSV_FILE)
     xml_dir = str(XML_DIR)
     save_xml_dir = str(SAVE_XML_DIR)
-    argparser.argparser()
     try:
+        argparser.argparser()
+
         # creates new csv file if it doesn't already exist
         if not os.path.isfile(csv_file):
             writer.create_new(csv_file)
@@ -28,22 +43,22 @@ if __name__ == '__main__':
         if not os.path.exists(save_xml_dir):
             os.makedirs(save_xml_dir)
 
-        start_time = time.time()
+        print('---------%s---------' % strftime("%Y-%m-%d %H:%M:%S", gmtime()))
+        start_time = time()
         downloader.download()
         scraper.main()
         cleaner.clean()
-        print("-Execution took %s seconds" % (round(time.time() - start_time, 3)))
+        print('Execution took %s seconds' % (round(time() - start_time, 3)))
+        print('-------------------------------------')
 
     except Exception as e:
         error_msg = 'Something went horribly wrong. Please check the program.\nError: %s' % e
         print(error_msg)
         traceback.print_exc()
-
-        # send the error via notify.run if USE_NOTIFY is True
-        if USE_NOTIFY:
-            from notify_run import Notify
+        # if USE_NOTIFY is True it sends a message to the given endpoint
+        if USE_NOTIFIER:
+            from pushnotifier import PushNotifier as pn
             from threading import Thread
             def send_notification():
-                notify = Notify()
-                notify.send(error_msg, ENDPOINT)
+                PN.send_text(error_msg)
             Thread(target=send_notification).start()

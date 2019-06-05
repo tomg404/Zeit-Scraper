@@ -1,4 +1,5 @@
 from pathlib import Path
+from pushnotifier import PushNotifier as pn
 
 basedir = Path().absolute()
 
@@ -12,6 +13,8 @@ FIELDNAMES = ['author', 'title_length', 'subtitle_length',
             'color_scheme', 'date_first_released', 'tags', 'title',
             'subtitle', 'location']
 
-# notify.run config
-USE_NOTIFY = False
-ENDPOINT = 'https://notify.run/XXXXXXXXXX'
+# pushnotifier.de config
+USE_NOTIFIER = True
+if USE_NOTIFIER:
+    #                      user,  pass, package, api_key
+    PN = pn.PushNotifier('XXXX', 'XXXX', 'XXXX', 'XXXX')

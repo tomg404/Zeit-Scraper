@@ -3,7 +3,7 @@
 import os
 from pathlib import Path
 import src.writer as writer
-from src.vars import XML_DIR, SAVE_XML_DIR, USE_NOTIFY, ENDPOINT
+from src.vars import *
 import xml.etree.ElementTree as ET
 
 
@@ -122,10 +122,9 @@ def main():
     print(result_msg)
 
     # if USE_NOTIFY is True it sends a message to the given endpoint
-    if USE_NOTIFY:
-        from notify_run import Notify
+    if USE_NOTIFIER:
+        from pushnotifier import PushNotifier as pn
         from threading import Thread
         def send_notification():
-            notify = Notify()
-            notify.send(result_msg, ENDPOINT)
+            PN.send_text(result_msg)
         Thread(target=send_notification).start()
