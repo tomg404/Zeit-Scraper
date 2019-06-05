@@ -14,7 +14,7 @@ FIELDNAMES = ['author', 'title_length', 'subtitle_length',
             'subtitle', 'location']
 
 # pushnotifier.de config
-USE_NOTIFIER = True
+USE_NOTIFIER = False
 if USE_NOTIFIER:
     #                      user,  pass, package, api_key
     PN = pn.PushNotifier('XXXX', 'XXXX', 'XXXX', 'XXXX')
