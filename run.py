@@ -1,29 +1,16 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-from src.vars import CSV_FILE, XML_DIR, SAVE_XML_DIR, USE_NOTIFY, ENDPOINT
-import src.downloader as downloader
-import src.scraper as scraper
-import src.cleaner as cleaner
-import src.writer as writer
-import src.argparser as argparser
+import os
 import time
-import os
 import traceback
-
-
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-
 from src.vars import *
-import src.downloader as downloader
+import src.writer as writer
 import src.scraper as scraper
 import src.cleaner as cleaner
-import src.writer as writer
 import src.argparser as argparser
-from time import gmtime, strftime, time
-import os
-import traceback
+import src.downloader as downloader
+
 
 
 if __name__ == '__main__':
