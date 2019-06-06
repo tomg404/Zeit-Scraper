@@ -1,15 +1,13 @@
 import argparse as ap
+from . import __version__, __author__
 
-__version__ = "1.2"
-__author__ = "Tom Gaimann | github.com/tomg404"
 
-def argparser():
+def parse():
     parser = ap.ArgumentParser(description="""
-    Project for downloading and scraping all new articles from https://www.zeit.de.\n
-    Please see the vars.py file (src/vars.py) if you want to use the service of https://notify.run.\n""",
+    Project for downloading and scraping all new articles from https://www.zeit.de""",
     epilog="(c) %s" % __author__)
     parser.add_argument('-v', '--version', action='version', version="Version: %s" % __version__, help="show program's version number and exit")
+    parser.add_argument('-e', '--enable-pushnotifier', action='store_true', help='Enable PushNotifier')
     # parser.add_argument('-o', '--output-file', help="set the ouput file path") # TODO: make this work
-    # parser.add_argument('-n', '--enable-notify', action='store_true') # TODO: make this work
-    # parser.add_argument('-e', '--set-notify-endpoint') # TODO: make this work too
     args = parser.parse_args()
+    return args

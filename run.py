@@ -18,7 +18,7 @@ if __name__ == '__main__':
     xml_dir = str(XML_DIR)
     save_xml_dir = str(SAVE_XML_DIR)
     try:
-        argparser.argparser()
+        argparser.parse()
 
         # creates new csv file if it doesn't already exist
         if not os.path.isfile(csv_file):
