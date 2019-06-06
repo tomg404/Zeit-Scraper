@@ -9,8 +9,8 @@ runs on my Synology Diskstation and is executed every 2 hours.
 ```python
 pip install -r requirements.txt
 ```
-2. __OPTIONAL:__ Set `USE_NOTIFIER` in `src/vars.py` to `True` if you want notifications on your phone. For more info see [pushnotifier.de](https://pushnotifier.de)
-2. Execute the `run.py` file
+2. __OPTIONAL:__ Edit the `config.ini` file to use PushNotifier. For more info see [pushnotifier.de](https://pushnotifier.de)
+2. Execute the `run.py` file. (`run.py -e` to enable PushNotifier)
 3. Have fun with your data!!!
 
 ### Screenshot
