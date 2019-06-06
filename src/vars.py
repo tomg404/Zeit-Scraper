@@ -24,7 +24,7 @@ USE_NOTIFIER = ap.parse().enable_pushnotifier
 if USE_NOTIFIER:
     def import_login_data(config_path):
         config = configparser.ConfigParser(allow_no_value=True)
-        config.read(config_path)
+        config.read(str(config_path))
         data = ['user','pass','package','apikey']
         data[0] = config['PushNotifier']['Username']
         data[1] = config['PushNotifier']['Password']
