@@ -21,6 +21,9 @@ pip install -r requirements.txt
 |------|-----|-------|-----------|------|---|
 |Max Mustermann|Kommentar|Sport|Fussball|Yes|...|
 
+### Sample bar chart
+![alt text](screenshots/commentable_articles.png)
+
 ### Future updates
 + Visualization of the scraped data
   + on a webpage
