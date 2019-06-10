@@ -22,6 +22,7 @@ pip install -r requirements.txt
 |Max Mustermann|Kommentar|Sport|Fussball|Yes|...|
 
 ### Sample bar chart
+This chart was made with matplotlib. Source code: `visualization/commentable.py`
 ![alt text](screenshots/commentable_articles.png)
 
 ### Future updates
