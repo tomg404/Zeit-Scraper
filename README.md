@@ -13,8 +13,9 @@ pip install -r requirements.txt
 2. Execute the `run.py` file. (`run.py -e` to enable PushNotifier)
 3. Have fun with your data!!!
 
-### Screenshot
-![alt text](https://raw.githubusercontent.com/tomg404/Zeit-Scraper/master/screenshots/Screenshot_1.png)
+### Some plots
+![pie chart](https://raw.githubusercontent.com/tomg404/Zeit-Scraper/master/visualization/plots/ressort_frequency.png)
+![bar chart](https://raw.githubusercontent.com/tomg404/Zeit-Scraper/master/visualization/plots/commentable.png)
 
 ### Output format
 |author|genre|ressort|sub_ressort|edited|...|
