@@ -101,6 +101,7 @@ sizes = [percentage(zeit_magazin),
          percentage(total_articles - zeit_magazin - gesellschaft - politik - news - kultur - feuilleton - wissen - wirtschaft - sport - digital)]
 # explode = (0.01,0.01,0.01,0.01,0.01,0.01,0.01,0.01,0.01,0.01)
 
+plt.style.use('seaborn-ticks')
 plt.pie(sizes, labels=labels, autopct='%1.1f%%')
 plt.axis('equal')
 plt.title('Frequency of ressorts on Zeit.de')
