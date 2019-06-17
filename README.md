@@ -24,6 +24,7 @@ pip install -r requirements.txt
 ### Sample charts
 These charts were made with matplotlib. Source codes in `visualization`.
 ![pie chart](visualization/plots/ressort_frequency.png)
+![bar chart](visualization/plots/publish_time.png)
 ![bar chart](visualization/plots/commentable.png)
 
 ### Future updates
