@@ -13,18 +13,18 @@ pip install -r requirements.txt
 2. Execute the `run.py` file. (`run.py -e` to enable PushNotifier)
 3. Have fun with your data!!!
 
-### Some plots
-![pie chart](https://raw.githubusercontent.com/tomg404/Zeit-Scraper/master/visualization/plots/ressort_frequency.png)
-![bar chart](https://raw.githubusercontent.com/tomg404/Zeit-Scraper/master/visualization/plots/commentable.png)
+### Screenshot
+![alt text](https://raw.githubusercontent.com/tomg404/Zeit-Scraper/master/screenshots/Screenshot_1.png)
 
 ### Output format
 |author|genre|ressort|sub_ressort|edited|...|
 |------|-----|-------|-----------|------|---|
 |Max Mustermann|Kommentar|Sport|Fussball|Yes|...|
 
-### Sample bar chart
-This chart was made with matplotlib. Source code: `visualization/commentable.py`
-![alt text](screenshots/commentable_articles.png)
+### Sample charts
+These charts were made with matplotlib. Source codes in `visualization`.
+![pie chart](visualization/plots/ressort_frequency.png)
+![bar chart](visualization/plots/commentable.png)
 
 ### Future updates
 + Visualization of the scraped data
