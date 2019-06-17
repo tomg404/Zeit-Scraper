@@ -10,7 +10,8 @@ import matplotlib.pyplot as plt
 from pathlib import Path
 
 # path where the plot gets saved
-SAVE_PATH = Path().absolute().joinpath('visualization/').joinpath('plots/').joinpath('commentable.png')
+plot_name = 'commentable.png'
+SAVE_PATH = Path(__file__).resolve().parent.joinpath('plots/').joinpath(plot_name)
 
 # pass csv file via commandline
 data = sys.argv[1]
