@@ -1,7 +1,6 @@
 """Scrapes articles in xml-temp and moves them to xml-files to store them (forever)"""
 
 import os
-from pathlib import Path
 import src.writer as writer
 from src.vars import *
 import xml.etree.ElementTree as ET
@@ -70,13 +69,13 @@ class Article:
         try:
             self.title = body.find('title').text
             self.title_length = len(self.title)
-        except:
+        except Exception:
             pass
         ###
         try:
             self.subtitle = body.find('subtitle').text
             self.subtitle_length = len(self.subtitle)
-        except:
+        except Exception:
             pass
 
 
@@ -90,7 +89,7 @@ def main():
             a = Article(str(XML_DIR.joinpath(file)))
             a.scrape()
 
-            dict = {
+            dictionary = {
             'location': str(a.location),
             'author': str(a.author),
             'title': str(a.title),
@@ -109,7 +108,7 @@ def main():
             'date_first_released': str(a.date_first_released),
             'tags': str(a.tags),
             }
-            writer.insert_data(dict)
+            writer.insert_data(dictionary)
 
             counter += 1    # increment success counter
             os.rename(str(XML_DIR.joinpath(file)), str(SAVE_XML_DIR.joinpath(file))) # move the files to the storage

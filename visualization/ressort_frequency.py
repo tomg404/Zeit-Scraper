@@ -4,7 +4,6 @@ frequency of the ressorts on Zeit.de
 '''
 
 import csv
-import numpy as np
 import sys
 import matplotlib.pyplot as plt
 from pathlib import Path

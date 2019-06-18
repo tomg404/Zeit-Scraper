@@ -1,6 +1,6 @@
 """Cleans the xml-temp directory if there are files which couldn't be parsed"""
 
-from os import listdir, remove, path
+from os import listdir, remove
 from src.vars import XML_DIR
 
 def clean():

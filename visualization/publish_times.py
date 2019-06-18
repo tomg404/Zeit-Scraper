@@ -2,8 +2,6 @@ import csv
 import matplotlib.pyplot as plt
 import sys
 from dateutil import parser
-import datetime
-import numpy as np
 from pathlib import Path
 
 # path where the plot gets saved

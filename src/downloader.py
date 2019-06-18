@@ -1,7 +1,5 @@
 """Downloads the xml file of every new article on zeit.de in a folder"""
 
-import random
-from pathlib import Path
 import os
 import requests
 import xml.etree.ElementTree as ET
@@ -53,7 +51,7 @@ def download_all_articles(urls_array):
                     d.write(r)
 
                 new_file_counter += 1
-            except:
+            except Exception:
                 failed_file_counter += 1
 
     print('-Downloaded %s new files! %s failed.' % (new_file_counter, failed_file_counter))
